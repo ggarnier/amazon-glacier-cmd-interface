@@ -65,7 +65,7 @@ def tree_hash(fo):
     return hashes[0]
 
 def bytes_to_hex(str):
-    return ''.join( [ "%02x" % ord( x ) for x in str] ).strip()
+    return ''.join( [ "%02x" % x for x in str] ).strip()
 
 class GlacierWriter(object):
     """

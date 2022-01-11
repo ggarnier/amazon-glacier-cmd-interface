@@ -230,7 +230,7 @@ if __name__ == '__main__':
     try:
         try:
             raise ChildrenException("parent")
-        except ChildrenException, e:
+        except ChildrenException as e:
             raise ParentException("children", cause=e)
-    except ParentException, e:
+    except ParentException as e:
         e.write(indentation='||  ')

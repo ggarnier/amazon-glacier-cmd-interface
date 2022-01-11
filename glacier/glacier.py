@@ -554,7 +554,7 @@ def main():
     # Helper functions
     filt_s= lambda x: x.lower().replace("_","-")
     filt = lambda x,y="": dict(((y+"-" if y not in filt_s(k) else "") +
-                             filt_s(k), v) for (k, v) in x.iteritems())
+                             filt_s(k), v) for (k, v) in iter(x.items()))
     """
     >>> a = {'notifications': 'True', 'monitored_vaults': 'vvt,vv1', "aws-foo":"neki"}
     >>> filt(a, "aws").get('aws-foo')
