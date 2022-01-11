@@ -14,7 +14,7 @@ import localsettings
 
 class TestGlacierSNS(unittest.TestCase):
     def setUp(self):
-        config = ConfigParser.SafeConfigParser()
+        config = ConfigParser.ConfigParser()
         config.read(['/etc/glacier-cmd.conf',
                     os.path.expanduser('~/.glacier-cmd')])
 

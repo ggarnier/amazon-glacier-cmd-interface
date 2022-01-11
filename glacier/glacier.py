@@ -8,7 +8,7 @@
 
 import sys
 import os
-import ConfigParser
+import configparser
 import argparse
 import re
 import locale
@@ -500,7 +500,7 @@ def main():
     # Here we parse config from files in home folder or in current folder
     # We use separate topics for aws and glacier specific configs
     aws = glacier = sdb = {}
-    config = ConfigParser.SafeConfigParser()
+    config = configparser.ConfigParser()
 
     sns = {'topics_present':False, 'topic':'aws-glacier-notifications'}
 
