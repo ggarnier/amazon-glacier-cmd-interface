@@ -18,10 +18,10 @@ import json
 
 from prettytable import PrettyTable
 
-from GlacierWrapper import GlacierWrapper
+from .GlacierWrapper import GlacierWrapper
 
 from functools import wraps
-from glacierexception import *
+from .glacierexception import *
 
 def output_headers(headers, output):
     """
@@ -547,9 +547,13 @@ def main():
                 sns['topic'] = config.get('SNS', 'topic')
 
     # Join config options with environments
-    aws = dict(os.environ.items() + aws.items() )
-    glacier = dict(os.environ.items() + glacier.items() )
-    sdb = dict(os.environ.items() + sdb.items() )
+    #import pdb; pdb.set_trace()
+    #aws = dict(os.environ.items() + aws.items() )
+    #glacier = dict(os.environ.items() + glacier.items() )
+    #sdb = dict(os.environ.items() + sdb.items() )
+    aws = dict(aws.items())
+    glacier = dict(glacier.items())
+    sdb = dict(sdb.items())
 
     # Helper functions
     filt_s= lambda x: x.lower().replace("_","-")

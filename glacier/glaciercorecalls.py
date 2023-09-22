@@ -24,7 +24,7 @@ import time
 
 import boto.glacier.layer1
 
-from glacierexception import *
+from .glacierexception import *
 
 # Placeholder, effectively renaming the class.
 class GlacierConnection(boto.glacier.layer1.Layer1):

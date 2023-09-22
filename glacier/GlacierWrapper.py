@@ -15,7 +15,6 @@ import os.path
 import time
 import sys
 import traceback
-import glaciercorecalls
 import select
 import hashlib
 import fcntl
@@ -31,9 +30,10 @@ from dateutil.parser import parse as dtparse
 from datetime import datetime
 from pprint import pformat
 
-from glaciercorecalls import GlacierConnection, GlacierWriter
+from .glaciercorecalls import GlacierConnection, GlacierWriter
+from .glaciercorecalls import *
 
-from glacierexception import *
+from .glacierexception import *
 
 class log_class_call(object):
     """
@@ -71,7 +71,7 @@ class log_class_call(object):
 
             return ret
 
-        wrapper.func_name = fn.func_name
+        #wrapper.func_name = fn.func_name
         if hasattr(fn, '__name__'):
             wrapper.__name__ = self.name = fn.__name__
 
