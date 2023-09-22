@@ -25,3 +25,6 @@ bootstrap.py
 #vim
 *.swp
 .ropeproject
+
+build/
+dist/
